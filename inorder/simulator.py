@@ -181,6 +181,11 @@ class ILPSimulator:
                     if op not in self.config['op_to_unit']:
                         raise ValueError(f"Строка {i}: Недоступная операция '{op}' в {line}")
                     self.program.append(Instruction(op=op, rd=rd, imm=imm, raw_text=line))
+                else:
+                    line = line.strip()
+                    if not line or line.startswith('#') or line.endswith(':'):
+                        continue
+                    raise NotImplementedError(f"{line} не распознана")
 
     def run(self):
         register_ready_at: Dict[str, int] = {}
