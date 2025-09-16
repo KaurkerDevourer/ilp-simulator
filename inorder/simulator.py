@@ -295,6 +295,7 @@ class ILPSimulator:
         elif op == 'sw':
             pass 
         else:
+            print(f"Операция '{op}' не реализована")
             raise NotImplementedError(f"Операция '{op}' не реализована")
 
         if instr.op == 'sw':
