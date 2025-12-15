@@ -16,7 +16,6 @@ CPU симулятор In-Order-Execution'а.
 | jgt         | `t1, t2, label`  | `Jump to 'label' if t1 > t2`         |
 | jle         | `t1, t2, label`  | `Jump to 'label' if t1 <= t2`         |
 | jlt         | `t1, t2, label`  | `Jump to 'label' if t1 < t2`         |
-| sw          | `t1, X`          | `X = t1`         |
 | lw          | `t1, X`          | `t1 = X`         |
 | sw          | `t1, X`          | `X = t1`         |
 | li          | `t1, #value`     | `li t1, #5` (t1 = 5) |
